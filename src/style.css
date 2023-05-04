@@ -1,22 +1,50 @@
 * {
   margin: 0;
   padding: 0;
-  width: 100%;
 }
 
 body {
+  --primary-color: #FFB75B;
+
   font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
   background-color: black;
-  color: #FFB75B;
-
+  box-sizing: border-box;
   height: 100vh;
 }
 
-#content {
+#container {
   background: url(./assets/hero.jpg) no-repeat top right fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
   height: 100%;
+}
+
+#content {
+  padding: 30px;
+}
+
+nav ul {
+  list-style-type: none;
+
+  display: flex;
+  gap: 50px;
+  width: max-content;
+}
+
+nav li {
+}
+
+nav a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: 1000;
+  font-size: 100px;
+  letter-spacing: 0.3em;
+  color: var(--primary-color);
 }
