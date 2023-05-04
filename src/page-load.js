@@ -25,7 +25,7 @@ const renderHeader = () => {
 };
 
 const pageLoad = () => {
-  const content = document.querySelector('.content');
+  const content = document.getElementById('content');
   content.appendChild(renderNav());
   content.appendChild(renderHeader());
 };
