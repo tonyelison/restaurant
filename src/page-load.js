@@ -17,12 +17,26 @@ const renderNav = () => {
   return nav;
 };
 
-const renderHeader = () => {
+const renderHomePage = () => {
+  const homeDiv = document.createElement('div');
   const h1 = document.createElement('h1');
+  const h3 = document.createElement('h3');
 
   h1.textContent = 'LOREM IPSUM';
+  h3.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
 
-  return h1;
+  homeDiv.classList.add('home');
+  homeDiv.append(h1, h3);
+
+  return homeDiv;
+};
+
+const renderFooter = () => {
+  const footer = document.createElement('footer');
+
+  footer.textContent = '© Copyright by Lorem Ipsum LLC. All rights reserved.';
+
+  return footer;
 };
 
 const pageLoad = () => {
@@ -31,7 +45,8 @@ const pageLoad = () => {
 
   content.id = 'content';
   content.appendChild(renderNav());
-  content.appendChild(renderHeader());
+  content.appendChild(renderHomePage());
+  content.appendChild(renderFooter());
 
   container.appendChild(content);
 };

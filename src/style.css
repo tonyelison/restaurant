@@ -23,7 +23,16 @@ body {
 }
 
 #content {
-  padding: 30px;
+  padding: 30px 30px 15px 30px;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 50px;
+  
+  height: 100%;
+  height: fill-available;
+  height: -moz-available;
+  height: -webkit-fill-available;
 }
 
 nav ul {
@@ -39,9 +48,23 @@ nav a {
   text-decoration: none;
 }
 
+h1, h3, footer {
+  color: var(--primary-color);
+  letter-spacing: 0.36em;
+}
+
 h1 {
   font-weight: 1000;
   font-size: 100px;
-  letter-spacing: 0.3em;
-  color: var(--primary-color);
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+footer {
+  display: none; /* hide for now */
+  font-size: 14px;
+  font-weight: bold;
 }
