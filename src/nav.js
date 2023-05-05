@@ -2,28 +2,23 @@ import renderHome from './home/index';
 import renderMenu from './menu';
 import renderContact from './contact';
 
+const tabs = [
+  { name: 'home', render: renderHome },
+  { name: 'menu', render: renderMenu },
+  { name: 'contact', render: renderContact },
+];
+
 const renderNav = () => {
   const nav = document.createElement('nav');
   const ul = document.createElement('ul');
-
-  const tabs = [
-    { name: 'Home', render: renderHome },
-    { name: 'Menu', render: renderMenu },
-    { name: 'Contact', render: renderContact },
-  ];
 
   tabs.forEach((tab) => {
     const li = document.createElement('li');
     const a = document.createElement('a');
 
+    li.classList.add(tab.name);
     a.textContent = tab.name;
-    a.addEventListener('click', () => {
-      const pageContent = document.querySelector('.page-content');
-      if (!pageContent.classList.contains(tab.name.toLowerCase())) {
-        const contentContainer = document.getElementById('content');
-        contentContainer.replaceChild(tab.render(), pageContent);
-      }
-    });
+    a.addEventListener('click', tab.render);
 
     li.appendChild(a);
     ul.appendChild(li);

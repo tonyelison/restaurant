@@ -7,11 +7,11 @@ const pageLoad = () => {
   const content = document.createElement('div');
 
   content.id = 'content';
+  container.appendChild(content);
+
   content.appendChild(renderNav());
   content.appendChild(renderHome());
   content.appendChild(renderFooter());
-
-  container.appendChild(content);
 };
 
 export default pageLoad;
