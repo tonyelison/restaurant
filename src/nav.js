@@ -1,4 +1,6 @@
 import renderHome from './home';
+import renderMenu from './menu';
+import renderContact from './contact';
 
 const renderNav = () => {
   const nav = document.createElement('nav');
@@ -6,8 +8,8 @@ const renderNav = () => {
 
   const tabs = [
     { name: 'Home', render: renderHome },
-    { name: 'Menu', render: renderHome },
-    { name: 'Contact', render: renderHome },
+    { name: 'Menu', render: renderMenu },
+    { name: 'Contact', render: renderContact },
   ];
 
   tabs.forEach((tab) => {
