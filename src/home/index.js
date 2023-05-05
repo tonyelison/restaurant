@@ -1,4 +1,4 @@
-import renderMenu from './menu';
+import renderMenu from '../menu';
 
 const renderHome = () => {
   const homeDiv = document.createElement('div');

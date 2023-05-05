@@ -1,5 +1,5 @@
 import renderNav from './nav';
-import renderHome from './home';
+import renderHome from './home/index';
 import renderFooter from './footer';
 
 const pageLoad = () => {

@@ -1,4 +1,4 @@
-import renderHome from './home';
+import renderHome from './home/index';
 import renderMenu from './menu';
 import renderContact from './contact';
 
