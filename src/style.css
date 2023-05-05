@@ -7,6 +7,7 @@ body {
   --primary-color: #FFB75B;
 
   font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+  letter-spacing: 0.2em;
   background-color: black;
   box-sizing: border-box;
   height: 100vh;
@@ -27,7 +28,7 @@ body {
 
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: 50px;
+  gap: 75px;
   
   height: 100%;
   height: fill-available;
@@ -61,7 +62,41 @@ h1 {
 
 h3 {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
+  margin-top: 25px;
+}
+
+.page-content {
+  max-width: 1250px;
+}
+
+.home {
+  display: grid;
+  grid-template-rows: max-content max-content;
+}
+
+.home button {
+  width: fit-content;
+  height: fit-content;
+  padding: 14px 42px;
+  margin-top: 45px;
+
+  font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+  letter-spacing: 0.2em;
+  font-size: 18px;
+  font-weight: bold;
+
+  color: var(--primary-color);
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+
+  transition: all, 0.2s;
+  cursor: pointer;
+}
+
+.home button:hover {
+  color: black;
+  background-color: var(--primary-color);
 }
 
 footer {
